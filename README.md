@@ -69,8 +69,7 @@ No frameworks, no dependencies – just open index.html and play.
 🚀 Getting Started
 
 1. Clone the repository:
-
-git clone https://github.com/your-username/simple-pong-levels.git
+[git clone https://github.com/your-username/simple-pong-levels.git](https://github.com/UmarMuhammad18/Ping-Pong-Game.git)
 
 2. Open pingpong.html in any modern browser (Chrome, Firefox, Edge, Safari).
 
