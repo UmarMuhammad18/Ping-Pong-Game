@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Pong</title>
+  <link rel="stylesheet" href="pingpong.css" />
+</head>
+<body>
+  <div class="wrap">
+    <h1>Simple Pong</h1>
+    <!-- Replace the HUD section with this: -->
+  <div id="hud">
+    <div id="score">Player 0 — 0 Computer | Level 1: Beginner | Highscore 0</div>
+    <div id="instructions">Controls: Move mouse over canvas or use ↑ / ↓ keys. Press Space to pause, R to restart.</div>
+  </div>
+    <canvas id="game" width="800" height="500"></canvas>
+    <footer>Left: you · Right: CPU</footer>
+  </div>
+  <script src="pingpong.js"></script>
+</body>
+</html>
+<!--
+  This is a simple Pong game implemented in HTML5 Canvas and JavaScript.
+  The player controls the left paddle using the mouse or keyboard, while the computer controls the right paddle.
+  The game includes a scoring system, multiple difficulty levels, and a high score tracker.
+  Use the spacebar to pause/resume and 'R' to restart the game.-->
