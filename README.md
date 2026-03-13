@@ -61,7 +61,7 @@ The high score is the total number of player points accumulated during a single 
 
 - HTML5 – structure & canvas element.
 - CSS3 – modern layout, gradients, dark theme.
-- Vanilla JavaScript – game loop, collision detection, AI, rendering.
+- JavaScript – game loop, collision detection, AI, rendering.
 - LocalStorage API – persist high score across sessions.
 
 No frameworks, no dependencies – just open index.html and play.
