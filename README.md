@@ -1,30 +1,49 @@
-# Simple Pong
+# Simple Pong — 10 Levels of Progressive Challenge
 
 A Pong game built with HTML5 Canvas and vanilla JavaScript.
 
-Face an adaptive CPU across 10 courts, from Beginner to Legend. Five lives. Power-ups spawn mid-rally. High score is saved in the browser.
+Face an adaptive CPU across 10 courts, from Beginner to Legend. You get five lives. Power-ups spawn mid-rally. High score is saved in the browser.
 
-The original navy court, dashed net, and ice / clay paddles are unchanged. Hits, lives, sound, and on-screen paddle buttons are new.
+The original navy court, dashed net, and ice / clay paddles are still the look. Controls, lives, sound, and mobile play are new.
+
+**Play live:** [ping-pong-game-blush.vercel.app](https://ping-pong-game-blush.vercel.app)
 
 ![Simple Pong](https://github.com/user-attachments/assets/8c7f895b-9555-476d-9100-e62c5d87e711)
 
 ## Features
 
-- 10 progressive levels with unique ball speed, CPU reaction, paddle size, and points to advance
-- Five lives per run
-- Power-ups: Wide, Slow, Multi, Magnet, Burst
-- Adaptive CPU with prediction and error that tightens each court
-- Mouse / trackpad follow, keyboard (W/S or arrows), touch drag, on-screen hold buttons, gamepad
-- Pause with Space / Esc / P, restart with R
-- Hit sounds, score cues, and a light music loop (volume in Settings)
-- High score and best court saved in LocalStorage
-- Responsive canvas that fills the viewport on phone and desktop
+- **10 progressive levels** — Beginner through Legend, each with its own ball speed, CPU speed, paddle height, and points to advance
+- **Five lives** — a point against you costs a life; run ends at zero
+- **Power-ups** — Wide, Slow, Multi, Magnet, Burst (spawn mid-rally)
+- **Adaptive CPU** — predicts the bounce, then adds error that tightens each court
+- **Working high score** — best score and highest court saved in LocalStorage
+- **Sound** — hit, wall, score, level-up, and a light music loop (mute in Settings)
+- **Mobile** — drag the court or hold the on-screen paddle buttons
+- **Desktop** — mouse follow, W/S or arrows, Space to pause, R to restart, gamepad
+- **Responsive court** — letterboxed canvas that fills phone and desktop viewports
 
 ## How to play
 
-You are the left paddle (ice blue). The CPU is the right paddle (clay).
+You control the **left paddle** (ice blue). The computer controls the **right paddle** (clay).
 
-Score by sending the ball past the CPU. Reach the level's point target to advance. Lose a life when the ball gets past you. Survive all ten courts.
+1. Send the ball past the CPU to score.
+2. Reach the level's point target (progress bar) to advance.
+3. Lose a life when the ball gets past you.
+4. Clear all 10 courts — or set a new high score before you run out of lives.
+
+High score is the total player points from a single run.
+
+## Power-ups
+
+Orbs appear on the court during a rally. Hit one to activate it for a few seconds.
+
+| Orb | Effect |
+| --- | --- |
+| **W** Wide | Your paddle grows |
+| **S** Slow | The ball eases off |
+| **M** Multi | A second ball splits off |
+| **G** Magnet | Incoming balls pull toward your paddle |
+| **B** Burst | The next hit launches harder |
 
 ## Levels
 
@@ -41,16 +60,16 @@ Score by sending the ball past the CPU. Reach the level's point target to advanc
 | 9 | Master | 570 | 540 | 58 | 5 |
 | 10 | Legend | 620 | 590 | 52 | 6 |
 
-High score is the total player points from a single run.
-
 ## Controls
 
 | Action | Input |
 | --- | --- |
-| Move paddle | Mouse over the court, W/S, arrow keys, drag, or hold ▲ / ▼ |
+| Move paddle | Mouse over the court, W / S, ↑ / ↓, drag, or hold ▲ / ▼ |
 | Pause / resume | Space, Esc, P, or the Pause button |
 | Restart | R |
-| Settings | Gear button — master / SFX / music / shake |
+| Volume & shake | Settings |
+
+On a phone, drag vertically on the court or hold the paddle buttons under the canvas.
 
 ## Run locally
 
@@ -59,7 +78,7 @@ git clone https://github.com/UmarMuhammad18/Ping-Pong-Game.git
 cd Ping-Pong-Game
 ```
 
-Open `pingpong.html` in a modern browser. No build step, no dependencies.
+Open `pingpong.html` in Chrome, Firefox, Edge, or Safari. No build step, no dependencies.
 
 ## Project structure
 
@@ -71,6 +90,10 @@ Ping-Pong-Game/
 ├── vercel.json     # Static rewrite to pingpong.html
 └── README.md
 ```
+
+## Tech
+
+HTML5 Canvas, CSS, vanilla JavaScript, Web Audio API, LocalStorage.
 
 ## License
 
