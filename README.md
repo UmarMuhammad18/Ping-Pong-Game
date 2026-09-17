@@ -1,100 +1,77 @@
-🏓 Simple Pong – 10 Levels of Progressive Challenge
+# Simple Pong
 
-A minimalist yet deep Pong implementation built with HTML5 Canvas and vanilla JavaScript.
-Face off against an adaptive AI across 10 distinct levels, each with unique ball speed, CPU reaction, paddle size, and point requirements.
-Track your personal best, control your paddle with a mouse or keyboard, and climb from Beginner to Legend.
-<img width="1888" height="1079" alt="Screenshot 2026-02-12 215408" src="https://github.com/user-attachments/assets/8c7f895b-9555-476d-9100-e62c5d87e711" />
+A Pong game built with HTML5 Canvas and vanilla JavaScript.
 
+Face an adaptive CPU across 10 courts, from Beginner to Legend. Five lives. Power-ups spawn mid-rally. High score is saved in the browser.
 
-✨ Features
+The original navy court, dashed net, and ice / clay paddles are unchanged. Hits, lives, sound, and on-screen paddle buttons are new.
 
-- 10 progressive levels – from Beginner to Legend.
-- Level‑specific modifiers – ball speed, CPU speed, paddle height, and required points to advance.
-- Score‑based progression – score the required number of points in a level to move up.
-- Smart CPU opponent – reacts faster on higher levels; returns to the centre when idle.
-- Dual paddle control – use mouse (real‑time) or arrow keys (discrete).
-- Touch support – play on tablets and touchscreens.
-- Pause / Resume – press Space.
-- Instant restart – press R at any time.
-- Persistent highscore – your best total score is saved in your browser (LocalStorage).
-- Visual feedback – level transition animation, progress bar, game‑over screen.
-- Clean dark‑theme UI – smooth gradients and subtle neon accents.
+![Simple Pong](https://github.com/user-attachments/assets/8c7f895b-9555-476d-9100-e62c5d87e711)
 
-🎮 How to Play
+## Features
 
-- You control the left paddle (blue).
-- The computer controls the right paddle (orange).
-- Score a point by hitting the ball past the computer’s paddle.
-- Win the current level by reaching the target points displayed on the progress bar.
-- Advance through all 10 levels and try to set a new high score (your total player points in one run).
+- 10 progressive levels with unique ball speed, CPU reaction, paddle size, and points to advance
+- Five lives per run
+- Power-ups: Wide, Slow, Multi, Magnet, Burst
+- Adaptive CPU with prediction and error that tightens each court
+- Mouse / trackpad follow, keyboard (W/S or arrows), touch drag, on-screen hold buttons, gamepad
+- Pause with Space / Esc / P, restart with R
+- Hit sounds, score cues, and a light music loop (volume in Settings)
+- High score and best court saved in LocalStorage
+- Responsive canvas that fills the viewport on phone and desktop
 
-📊 Levels & Difficulty
+## How to play
 
-| Level |  Name        |  Ball Speed |  CPU Speed  | Paddle Height  | Points to Advance |
-|-------|:------------:|:-----------:|:-----------:|:--------------:|------------------:|
-|  1	  | Beginner	   |     5.0	   |    5.0	     |      110	      |        3          |
-|  2    |	Novice	     |     5.5	   |    5.5	     |      100	      |        3          |
-|  3	  | Rookie	     |     6.0     |    6.0	     |      90        |        3          |
-|  4	  | Amateur	     |     6.5	   |    6.5	     |      80        |        4          |
-|  5	  | Intermediate |     7.0	   |    7.0	     |      75	      |        4          |
-|  6	  | Skilled	     |     7.5     |    7.5	     |      70	      |        4          |
-|  7	  | Advanced	   |     8.0	   |    8.0	     |      65	      |        5          |
-|  8	  | Expert	     |     8.5	   |    8.5	     |      60	      |        5          |
-|  9	  | Master	     |     9.0     |    9.0	     |      55	      |        5          |
-|  10	  | Legend	     |     10.0	   |    10.0	   |      50	      |        6          |
+You are the left paddle (ice blue). The CPU is the right paddle (clay).
 
-The high score is the total number of player points accumulated during a single playthrough.
+Score by sending the ball past the CPU. Reach the level's point target to advance. Lose a life when the ball gets past you. Survive all ten courts.
 
-🕹️ Controls
+## Levels
 
-|     Action	       |           Input                |
-|--------------------|-------------------------------:|
-| Move paddle up	   |  ↑ (Arrow Up) or mouse move    |
-| Move paddle down	 |  ↓ (Arrow Down) or mouse move  |
-| Pause / Resume	   |  Space                         |
-| Restart game	     |  R                             |
-| Touch	             |  Drag vertically on canvas     |
-- Mouse: the paddle follows your cursor smoothly – no click needed.
-- Keyboard: discrete steps, can be combined with the mouse.
+| Level | Name | Ball speed | CPU speed | Paddle height | Points to advance |
+| --- | --- | --- | --- | --- | --- |
+| 1 | Beginner | 320 | 280 | 118 | 3 |
+| 2 | Novice | 350 | 310 | 108 | 3 |
+| 3 | Rookie | 380 | 340 | 98 | 3 |
+| 4 | Amateur | 410 | 370 | 90 | 4 |
+| 5 | Intermediate | 440 | 400 | 82 | 4 |
+| 6 | Skilled | 470 | 430 | 76 | 4 |
+| 7 | Advanced | 500 | 460 | 70 | 5 |
+| 8 | Expert | 535 | 500 | 64 | 5 |
+| 9 | Master | 570 | 540 | 58 | 5 |
+| 10 | Legend | 620 | 590 | 52 | 6 |
 
-🛠️ Technologies Used
+High score is the total player points from a single run.
 
-- HTML5 – structure & canvas element.
-- CSS3 – modern layout, gradients, dark theme.
-- JavaScript – game loop, collision detection, AI, rendering.
-- LocalStorage API – persist high score across sessions.
+## Controls
 
-No frameworks, no dependencies – just open index.html and play.
+| Action | Input |
+| --- | --- |
+| Move paddle | Mouse over the court, W/S, arrow keys, drag, or hold ▲ / ▼ |
+| Pause / resume | Space, Esc, P, or the Pause button |
+| Restart | R |
+| Settings | Gear button — master / SFX / music / shake |
 
-🚀 Getting Started
+## Run locally
 
-1. Clone the repository:
-[git clone https://github.com/your-username/simple-pong-levels.git](https://github.com/UmarMuhammad18/Ping-Pong-Game.git)
+```bash
+git clone https://github.com/UmarMuhammad18/Ping-Pong-Game.git
+cd Ping-Pong-Game
+```
 
-2. Open pingpong.html in any modern browser (Chrome, Firefox, Edge, Safari).
+Open `pingpong.html` in a modern browser. No build step, no dependencies.
 
-3. Start playing – your high score is automatically saved.
+## Project structure
 
-📁 Project Structure
-
-simple-pong-levels/
-
-├── pingpong.html      # Main game page
-
-├── pingpong.css       # All styling
-
-├── pingpong.js        # Game logic, levels, rendering
-
+```
+Ping-Pong-Game/
+├── pingpong.html   # Page, HUD, overlays, paddle buttons
+├── pingpong.css    # Navy court theme
+├── pingpong.js     # Loop, physics, AI, audio, input
+├── vercel.json     # Static rewrite to pingpong.html
 └── README.md
+```
 
-💡 Possible Improvements
+## License
 
-- 🔊 Add sound effects (hit, score, level up).
-- 🏆 Fix highscore saving (currently loads but does not update – simple fix).
-- 🌐 Online leaderboard.
-- 📱 Better responsive scaling for very small screens.
-- ⚔️ Two‑player local mode.
-
-📄 License
-
-This project is open source and available under the MIT License.
+MIT

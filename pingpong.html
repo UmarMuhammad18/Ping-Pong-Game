@@ -2,26 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Simple Pong</title>
   <link rel="stylesheet" href="pingpong.css" />
 </head>
 <body>
   <div class="wrap">
-    <h1>Simple Pong</h1>
-    <!-- Replace the HUD section with this: -->
-  <div id="hud">
-    <div id="score">Player 0 — 0 Computer | Level 1: Beginner | Highscore 0</div>
-    <div id="instructions">Controls: Move mouse over canvas or use ↑ / ↓ keys. Press Space to pause, R to restart.</div>
-  </div>
-    <canvas id="game" width="800" height="500"></canvas>
-    <footer>Left: you · Right: CPU</footer>
+    <header>
+      <h1>Simple Pong</h1>
+      <div class="actions">
+        <button type="button" id="pauseBtn" hidden>Pause</button>
+        <button type="button" id="settingsBtn">Settings</button>
+      </div>
+    </header>
+
+    <div id="hud">
+      <div id="score">Player 0 — 0 Computer | Level 1: Beginner | Highscore 0</div>
+      <div id="meta">5 lives · drag the court, hold the paddle buttons, or use W/S and arrows</div>
+      <div class="bar"><div id="progress"></div></div>
+    </div>
+
+    <div id="court">
+      <canvas id="game" width="960" height="540" tabindex="0" aria-label="Pong court"></canvas>
+
+      <div id="overlay" class="overlay">
+        <div class="panel" id="menuPanel">
+          <p class="kicker">10 levels</p>
+          <h2>Simple Pong</h2>
+          <p class="lede">Face an adaptive CPU across ten courts. Five lives. Power-ups spawn mid-rally. Beat Legend.</p>
+          <p class="stats" id="menuStats">Best 0 · Highest court 1</p>
+          <button type="button" class="primary" id="playBtn">Play</button>
+        </div>
+        <div class="panel" id="pausePanel" hidden>
+          <h2>Paused</h2>
+          <p class="lede">Space resumes. R restarts.</p>
+          <div class="row">
+            <button type="button" class="primary" id="resumeBtn">Resume</button>
+            <button type="button" id="restartBtn">Restart</button>
+          </div>
+        </div>
+        <div class="panel" id="overPanel" hidden>
+          <h2 id="overTitle">Game over</h2>
+          <p class="lede" id="overBody"></p>
+          <button type="button" class="primary" id="againBtn">Play again</button>
+        </div>
+        <div class="panel" id="settingsPanel" hidden>
+          <h2>Settings</h2>
+          <label>Master <input id="volMaster" type="range" min="0" max="1" step="0.01" /></label>
+          <label>SFX <input id="volSfx" type="range" min="0" max="1" step="0.01" /></label>
+          <label>Music <input id="volMusic" type="range" min="0" max="1" step="0.01" /></label>
+          <label class="check"><input id="shake" type="checkbox" /> Screen shake</label>
+          <button type="button" id="closeSettings">Done</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="paddle-controls" hidden>
+      <button type="button" id="upBtn" aria-label="Move paddle up">▲</button>
+      <button type="button" id="downBtn" aria-label="Move paddle down">▼</button>
+    </div>
+
+    <footer>Left: you · Right: CPU — drag the court, hold the paddle buttons, or use W/S and arrows. Space pauses.</footer>
   </div>
   <script src="pingpong.js"></script>
 </body>
 </html>
-<!--
-  This is a simple Pong game implemented in HTML5 Canvas and JavaScript.
-  The player controls the left paddle using the mouse or keyboard, while the computer controls the right paddle.
-  The game includes a scoring system, multiple difficulty levels, and a high score tracker.
-  Use the spacebar to pause/resume and 'R' to restart the game.-->
